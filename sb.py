@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['yang tag sy semoga jomblo seumur hidup','ngapain tag tag woe, kangen?','ada apa ini? ko di tag?','duhh kena tag, dianya kesepian kali yah','gk usah tag, gift tikel aja']
+                            pilih = ['yang tag saya semoga jomblo seumur hidup','ngapain tag-tag woy, kangen?','ada apa ini? ko ditag?','duhh kena tag, dianya kesepian kali yah','gak usah tag, gift tikel aja']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
@@ -74,7 +74,7 @@ while True:
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
-                                if jml <= 100:
+                                if jml < 100:
                                     client.mention(msg.to, nama)
                                 if jml > 100 and jml < 200:
                                     for i in range(0, 100):
@@ -151,7 +151,7 @@ while True:
                                 pass
                             else:
                                 cctv['sidermem'][op.param1] += "\n~ " + Name
-                                pref=['eh ada','hai kak','aloo..','nah','lg ngapain','halo','sini kak']
+                                pref=['eh ada','hai kak','haloo..','nah','lagi ngapain','halo','sini kak']
                                 client.sendText(op.param1, str(random.choice(pref))+' '+Name)
                         else:
                             pass
